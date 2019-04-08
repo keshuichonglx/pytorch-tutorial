@@ -39,6 +39,7 @@ class VGGNet(nn.Module):
         
     def forward(self, x):
         """Extract multiple convolutional feature maps."""
+        
         features = []
         for name, layer in self.vgg._modules.items():
             x = layer(x)
